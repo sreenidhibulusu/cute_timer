@@ -1,18 +1,9 @@
 # cute_timer
+# Challenge: To build a simple app without AI code (2026)
 
-A new Flutter project.
+Currently there are a lot of surveys clamimg how AI at workplace is decreasing productivity, specially for senior engineers.
+My goal is to test this claim, to do this I'll following the following rules?
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# cute_timer
-Challenge to build a simple app without AI code (2026)
+1. Use simple google searches to help with code errors
+2. create the UI elements like buttons, GIFs etc myself rather than using image generation
+3. Only use AI to simplyfy an online explination of a problem
