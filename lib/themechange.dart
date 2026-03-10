@@ -19,6 +19,8 @@ class TimerWindow extends StatefulWidget {
 class _TimerWindowState extends State<TimerWindow> {
   var whichButton = 'left';
   var displayGif = themes['left']![1];
+  final stopwatch = Stopwatch();
+
   void changeWindow(var whichButton) {
     setState(() {
       if(whichButton == 'left') {
@@ -37,11 +39,26 @@ class _TimerWindowState extends State<TimerWindow> {
     setState(() {
       playButton = !playButton;
       if (playButton == false) {
+        stopwatch.stop();
         iconUsed = 'assets/pause_1-removebg-preview.png';
       } else {
+        stopwatch.start();
         iconUsed = 'assets/play-removebg-preview.png';
       }
     });
+  }
+
+  void resetTime() {
+    setState(() {
+      stopwatch.reset();
+    });
+  }
+
+  String getTime() {
+    var hours = stopwatch.elapsed.inHours.toString().padLeft(2, '0');
+    var minutes = (stopwatch.elapsed.inMinutes % 60).toString().padLeft(2, '0');
+    var seconds = (stopwatch.elapsed.inSeconds % 60).toString().padLeft(2, '0');
+    return '$hours:$minutes:$seconds';
   }
 
   @override
@@ -95,7 +112,7 @@ class _TimerWindowState extends State<TimerWindow> {
               width: 300,
               height: 100,
               child: Text(
-                '00:00:00',
+                getTime(),
                 textAlign: TextAlign.center,
                 style: GoogleFonts.bitcountGridSingleInk(
                   fontSize: 60,
@@ -113,7 +130,7 @@ class _TimerWindowState extends State<TimerWindow> {
                   width: 50,
                   height: 50,
                   child: IconButton(
-                    onPressed: null,
+                    onPressed: resetTime,
                     icon: Image.asset(
                       'assets/Reset-removebg-preview.png',
                     ),
