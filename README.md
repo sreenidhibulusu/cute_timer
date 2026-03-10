@@ -15,3 +15,10 @@ I have been working on this app since the past 3 days (giving 1-2 hrs per day)
 
 https://github.com/user-attachments/assets/0ce5677c-7c47-4c22-9e8e-3b698ae87161
 
+
++1hr today progress so far
+
+https://github.com/user-attachments/assets/948c186e-d0f5-426d-b2c7-f88df320cf07
+
+
+
