@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:gif_view/gif_view.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -59,6 +60,14 @@ class _TimerWindowState extends State<TimerWindow> {
     var minutes = (stopwatch.elapsed.inMinutes % 60).toString().padLeft(2, '0');
     var seconds = (stopwatch.elapsed.inSeconds % 60).toString().padLeft(2, '0');
     return '$hours:$minutes:$seconds';
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    Timer.periodic(Duration(seconds: 1), (timer) {
+      setState(() {});
+    });
   }
 
   @override
